@@ -1,6 +1,0 @@
-[deps]
-DataFrameTools = "2e886b56-b55e-403a-a2d0-ccbf75d993da"
-FileTools = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
-HypertextTools = "4502ade7-0b84-4acc-96da-75e5ce1d0abd"
-LocalRegistry = "89398ba2-070a-4b16-a995-9893c55d93cf"
-Shorthands = "d0c9a04e-d1fd-4d35-a387-089b7121b945"
