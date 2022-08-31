@@ -6,15 +6,14 @@
 dirmain(args...) = joinpath(dirname(pwd()), args...) # i.e. raw"D:\GoogleDrive\1Programming\julia"
 dir_myregistry = dirmain("OkRegistry")
 
-mypkglist = [
-    "https://github.com/okatsn/DataFrameTools.jl.git#main",
-    "https://github.com/okatsn/FileTools.jl#master",
-    "https://github.com/okatsn/Shorthands.jl.git#master",
-    "https://github.com/okatsn/HypertextTools.jl.git#master"
+mypkgnames = [
+    "DataFrameTools",
+    "FileTools",
+    "Shorthands",
+    "HypertextTools",
 ]
 
-mypkgnames = map(pkg -> match(r"[A-Za-z]+(?=\.jl)", pkg).match, mypkglist)
-
+localpkgpaths = dirmain.( mypkgnames.*".jl")
 
 # Create a local registry (only once)
 using LocalRegistry
@@ -24,20 +23,16 @@ create_registry(dir_myregistry, # name
     push=true
 )
 
-# You have to add/update all the packages before register
-using Pkg
-for myurl in mypkglist
-    Pkg.add(url=myurl)
-end
 
-
-for pkgname in mypkgnames
+for pkgpath in localpkgpaths
     register(
-        pkgname, 
+        pkgpath, 
         registry = dir_myregistry,
         # push=true # optional
     )
 end
+
+register(raw"D:\GoogleDrive\1Programming\julia\Shorthands.jl", registry = dir_myregistry)
 
 # Adding an registry to current environment
 using Pkg
