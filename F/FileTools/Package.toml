@@ -1,0 +1,3 @@
+name = "FileTools"
+uuid = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
+repo = "https://github.com/okatsn/FileTools.jl"
