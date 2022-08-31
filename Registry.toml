@@ -4,3 +4,4 @@ repo = "https://github.com/okatsn/OkRegistry.git"
 description = "A julia local registry"
 
 [packages]
+d0c9a04e-d1fd-4d35-a387-089b7121b945 = { name = "Shorthands", path = "S/Shorthands" }
