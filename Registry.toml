@@ -4,4 +4,5 @@ repo = "https://github.com/okatsn/OkRegistry.git"
 description = "A julia local registry"
 
 [packages]
+2e886b56-b55e-403a-a2d0-ccbf75d993da = { name = "DataFrameTools", path = "D/DataFrameTools" }
 d0c9a04e-d1fd-4d35-a387-089b7121b945 = { name = "Shorthands", path = "S/Shorthands" }

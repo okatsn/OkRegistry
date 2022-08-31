@@ -1,0 +1,3 @@
+name = "DataFrameTools"
+uuid = "2e886b56-b55e-403a-a2d0-ccbf75d993da"
+repo = "https://github.com/okatsn/DataFrameTools.jl.git"
