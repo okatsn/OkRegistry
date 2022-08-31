@@ -1,0 +1,6 @@
+name = "OkRegistry"
+uuid = "86e7831a-6f1f-4f41-b710-281fd69cacb1"
+repo = "https://github.com/okatsn/OkRegistry.git"
+description = "A julia local registry"
+
+[packages]
