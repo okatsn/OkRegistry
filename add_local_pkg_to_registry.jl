@@ -13,13 +13,13 @@ mypkgnames = [
     "HypertextTools",
 ]
 
-localpkgpaths = dirmain.( mypkgnames.*".jl")
+localpkgpaths = dirmain.(mypkgnames .* ".jl")
 
 # Create a local registry (only once)
 using LocalRegistry
 create_registry(dir_myregistry, # name
     "https://github.com/okatsn/OkRegistry.git", # repository url that already exists
-    ; description = "A julia local registry", # optional
+    ; description="A julia local registry", # optional
     push=true
 )
 
@@ -28,8 +28,8 @@ create_registry(dir_myregistry, # name
 
 for pkgpath in localpkgpaths
     register(
-        pkgpath, 
-        registry = dir_myregistry,
+        pkgpath,
+        registry=dir_myregistry,
         push=true # optional
     )
 end
