@@ -91,8 +91,9 @@ Also see [Signing tags](https://docs.github.com/en/authentication/managing-commi
 CHECKPOINT: 
 - see the error message: [Error: Input required and not supplied: key](https://github.com/okatsn/DataFrameTools.jl/runs/8149226032?check_suite_focus=true)
 - [GitHub Action YAML 撰寫技巧 - 環境變數(Environment Variables) 與 秘密 (Secrets)]https://ithelp.ithome.com.tw/articles/10263300?sc=iThomeR
-
-
+- [Quickly set up GitHub SSH example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-SSH-Key-Setup-Config-Ubuntu-Linux)
+- [SSH Keys for GitHub](https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html)
+- [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988)
 
 ## TODOs
 ### Create a git tag: 
