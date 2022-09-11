@@ -27,6 +27,72 @@ pkg> registry up OkRegistry
 - [Tips and tricks to register your first Julia package](https://www.juliabloggers.com/tips-and-tricks-to-register-your-first-julia-package/)
 - [Developing Julia Packages by Chris Rackauckas](https://www.youtube.com/watch?v=QVmU29rCjaA)
 
+## SSH KEYS
+SSH key always born into a pair, a public and private key.
+The
+
+[SSH commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification)
+
+[how-to-add-ssh-keys-to-your-github-account](https://www.inmotionhosting.com/support/server/ssh/how-to-add-ssh-keys-to-your-github-account/)
+  
+- [Manually start a ssh agent](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if `ssh-add -l` prints `Could not open a connection to your authentication agent. The agent has no identities.`
+  ```bash
+    t2276@DESKTOP-800FKD5$ eval "$(ssh-agent)"
+    Agent pid 1638
+  ```
+
+- With an agent, you can generate a key pair
+  ```bash 
+    t2276@DESKTOP-800FKD5$ ssh-keygen -t rsa -b 4096 -C "okatsn@gmail.com"
+    
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/c/Users/t2276/.ssh/id_rsa): 
+  ```
+
+- Enter `hello_ssh` for example, you'll get a public key `hello_ssh.pub` and a private key `hello_ssh`
+  ```bash
+    Created directory '/c/Users/t2276/.ssh'.
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again: 
+    Your identification has been saved in .ssh/id_rsa/hello_ssh
+    Your public key has been saved in .ssh/hello_ssh.pub
+  ```
+  > or alternatively [like this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+  > Also see [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) (this seems to be done only once?)
+
+- Print the public key and [Add the public key to your Github account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  ```
+  C:\Users\t2276> cat .ssh/hello_ssh.pub
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKDGia2q0.......
+  ......................................................
+  ......................................................
+  HGZOSEFXVP2FjesdBXEqnl8JbsQB4T7pLAw== okatsn@gmail.com
+  ```
+  or copy it to clipboard
+  ```
+  clip < ~/.ssh/hello_ssh.pub
+  ```
+
+- Tell [Telling Git about your (public) SSH key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key)
+  ```bash
+  git config --global user.signingkey 'ssh-rsa AAAAB3Nza...pLAw== okatsn@gmail.com'
+  ```
+
+- Next, you have to [Adding your SSH Private key to the ssh-agent](https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent); check the list using the same `ssh-add -l`.
+  ```bash
+  ssh-add ~/.ssh/id_rsa/hello_ssh
+  ```
+
+
+- [Telling Git about your SSH key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key)...TO_BE_CONTINUED
+
+Also see [Signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)
+
+CHECKPOINT: 
+- see the error message: [Error: Input required and not supplied: key](https://github.com/okatsn/DataFrameTools.jl/runs/8149226032?check_suite_focus=true)
+- [GitHub Action YAML 撰寫技巧 - 環境變數(Environment Variables) 與 秘密 (Secrets)]https://ithelp.ithome.com.tw/articles/10263300?sc=iThomeR
+
+
 
 ## TODOs
 ### Create a git tag: 
@@ -72,49 +138,6 @@ jobs:
 [Set it here as an example](https://github.com/okatsn/DataFrameTools.jl/settings/secrets/actions)
 
 
-###### SSH KEYS
-
-[SSH commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification)
-
-- [Create a SSH key like this](https://www.inmotionhosting.com/support/server/ssh/how-to-add-ssh-keys-to-your-github-account/); in Git-bash, do:
-  ```
-  t2276@DESKTOP-800FKD5$ ssh-add -l
-  Could not open a connection to your authentication agent.
-  
-  t2276@DESKTOP-800FKD5$ eval "$(ssh-agent)"
-  Agent pid 1638
-  
-  t2276@DESKTOP-800FKD5$ ssh-add -l
-  The agent has no identities.
-  
-  t2276@DESKTOP-800FKD5$ ssh-keygen -t rsa -b 4096 -C "okatsn@gmail.com"
-  
-  Generating public/private rsa key pair.
-  Enter file in which to save the key (/c/Users/t2276/.ssh/id_rsa): 
-  Created directory '/c/Users/t2276/.ssh'.
-  Enter passphrase (empty for no passphrase):
-  Enter same passphrase again: 
-  Your identification has been saved in /c/Users/t2276/.ssh/id_rsa
-  Your public key has been saved in /c/Users/t2276/.ssh/id_rsa.pub
-  ```
-  > or alternatively [like this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
-  > Also see [Adding your SSH key to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) (this seems to be done only once?)
-- Print the public key
-  ```
-  C:\Users\t2276> cat .ssh/id_rsa.pub
-  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKDGia2q0.......
-  ......................................................
-  ......................................................
-  HGZOSEFXVP2FjesdBXEqnl8JbsQB4T7pLAw== okatsn@gmail.com
-  ```
-- [Add the public key to your Github account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
-- [Telling Git about your SSH key](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key)...TO_BE_CONTINUED
-
-Also see [Signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)
-
-CHECKPOINT: 
-- see the error message: [Error: Input required and not supplied: key](https://github.com/okatsn/DataFrameTools.jl/runs/8149226032?check_suite_focus=true)
-- [GitHub Action YAML 撰寫技巧 - 環境變數(Environment Variables) 與 秘密 (Secrets)]https://ithelp.ithome.com.tw/articles/10263300?sc=iThomeR
 
 ##### Syntax
 Trigger a workflow
