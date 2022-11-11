@@ -2,34 +2,23 @@
 # https://blog.devgenius.io/the-most-underrated-feature-of-the-julia-programming-language-the-package-manager-652065f45a3a
 # Noted that the Project.toml and Registry.toml is not allowed in a registry folder; add LocalRegistry in @v1.6.
 
-
+# Instruction:
+# - `git clone https://github.com/okatsn/OkRegistry.git` to your dev folder
+#
+#
+# Requirement:
+# You'll need `registry add https://github.com/okatsn/OkRegistry.git` to use this script.
 using LocalRegistry
+using Shorthands, FileTools
 
-## Local paths to packages
-# this local path dependent approach should be abandon some day.
-try
-    cd("OkRegistry") 
-    using Pkg
-    Pkg.activate(".")
-catch
-    @warn "I think you are already in the OkRegistry folder and presumed that the environment is activated as OkRegistry."
-end
 dirmain(args...) = joinpath(dirname(pwd()), args...) # i.e. raw"D:\GoogleDrive\1Programming\julia"
 dir_myregistry = dirmain("OkRegistry")
 
-mypkgnames = [
-    "DataFrameTools",
-    "FileTools",
-    "Shorthands",
-    "HypertextTools",
-]
-
-localpkgpaths = dirmain.(mypkgnames .* ".jl")
-dpath = Dict(mypkgnames .=> localpkgpaths)
+localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 
 
-# Update the registry of one package 
-register(dpath["HypertextTools"], registry = dir_myregistry, push=true) 
+# # Update the registry of one package
+# register("/home/jovyan/swc-forecast-insider/temp/dev/Shorthands", registry = dir_myregistry, push=true) # for example
 
 
 
