@@ -24,6 +24,7 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 
 
 ## Add all local package to the registry created before
+register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
 
 for pkgpath in localpkgpaths
     register(
