@@ -23,15 +23,24 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 
 
 
-## Add all local package to the registry created before
+# # Add all local package to the registry created before
+# - Update an already registered package like this
+# - Add a newly created package in exactly the same way
+#
+# ## Register/update a single local package
 register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
-
+# ## Register/update all local packages
 for pkgpath in localpkgpaths
-    register(
-        pkgpath,
-        registry=dir_myregistry,
-        push=true # optional
-    )
+    try
+        register(
+            pkgpath,
+            registry=dir_myregistry,
+            push=true # optional
+        )
+    catch e
+        @warn "Error registering $pkgpath"
+        println(e)
+    end
 end
 
 
