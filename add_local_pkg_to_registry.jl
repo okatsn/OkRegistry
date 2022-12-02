@@ -31,16 +31,11 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
 # ## Register/update all local packages
 for pkgpath in localpkgpaths
-    try
-        register(
-            pkgpath,
-            registry=dir_myregistry,
-            push=true # optional
-        )
-    catch e
-        @warn "Error registering $pkgpath"
-        println(e)
-    end
+    register(
+        pkgpath,
+        registry=dir_myregistry,
+        push=true # optional
+    )
 end
 
 
