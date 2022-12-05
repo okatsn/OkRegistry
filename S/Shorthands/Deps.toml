@@ -1,7 +1,12 @@
 ["0.1.1-0"]
 InvertedIndices = "41ab1584-1d38-5bbf-9106-f11c6c58b48f"
 
-["0.1.2-0"]
+["0.1.2"]
 Proj = "c94c279d-25a6-4763-9509-64d165bea63e"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+
+["0.1.2-0"]
 TestItems = "1c621080-faea-4a02-84b6-bbd5e436b8fe"
+
+["0.1.4-0"]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
