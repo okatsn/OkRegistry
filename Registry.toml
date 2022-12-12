@@ -4,6 +4,7 @@ repo = "https://github.com/okatsn/OkRegistry.git"
 description = "A julia local registry"
 
 [packages]
+2060839e-1c32-41f2-b945-b79b1f5cc0e8 = { name = "OkExpressions", path = "O/OkExpressions" }
 2c042965-b292-4a40-a4a9-3abf2d00bee5 = { name = "FileTools", path = "F/FileTools" }
 2e886b56-b55e-403a-a2d0-ccbf75d993da = { name = "DataFrameTools", path = "D/DataFrameTools" }
 4502ade7-0b84-4acc-96da-75e5ce1d0abd = { name = "HypertextTools", path = "H/HypertextTools" }
