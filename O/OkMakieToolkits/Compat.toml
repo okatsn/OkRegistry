@@ -1,2 +1,9 @@
 [0]
 julia = "1.6.0-1"
+
+["0.2.1-0"]
+CairoMakie = "0.9-0.10"
+DataFrames = "1"
+GeometryBasics = "0.4"
+PlotUtils = "1"
+ShiftedArrays = "2"
