@@ -7,3 +7,7 @@ Proj = "1"
 ["0.1.2-0"]
 InvertedIndices = "1"
 TestItems = "0.1"
+
+["0.2-0"]
+Aqua = "0.5"
+PkgTemplates = "0.7"

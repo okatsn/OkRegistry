@@ -10,3 +10,6 @@ TestItems = "1c621080-faea-4a02-84b6-bbd5e436b8fe"
 
 ["0.1.4-0"]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+
+["0.2-0"]
+PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
