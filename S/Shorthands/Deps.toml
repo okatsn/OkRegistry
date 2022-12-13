@@ -13,3 +13,6 @@ Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 
 ["0.2-0"]
 PkgTemplates = "14b8a8f1-9102-5b29-a752-f990bacb7fe1"
+
+["0.3-0"]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
