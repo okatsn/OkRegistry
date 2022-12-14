@@ -28,7 +28,7 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 # - Add a newly created package in exactly the same way
 #
 # ## Register/update a single local package
-register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
+# register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
 # ## Register/update all local packages
 for pkgpath in localpkgpaths
     try
@@ -42,27 +42,3 @@ for pkgpath in localpkgpaths
         rethrow(e)
     end
 end
-
-
-
-
-
-
-
-
-## Create a local registry (only once)
-create_registry(dir_myregistry, # name
-    "https://github.com/okatsn/OkRegistry.git", # repository url that already exists
-    ; description="A julia local registry", # optional
-    push=true
-)
-
-
-# In cases you use `Pkg.develop("SomeNewPkg")` that was linked to the path such as "C:/Users//.julia/dev/SomeNewPkg", register the package like this (the following code don't work):
-
-using LocalRegistry, SomeNewPkg
-register(SomeNewPkg, "/home/tim/.julia/registries/HolyLabRegistry")
-
-# See [this](https://github.com/HolyLab/HolyLabRegistry#using-localregistry) for more information
-
-# Then git and push

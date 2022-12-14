@@ -58,7 +58,7 @@ Go to the script `add_local_pkg_to_registry.jl`.
 
 ## Applying your registry -- In a certain environment
 ### Adding an registry to the current environment
-Do this only once per environment.
+Do this only once per julia installation.
 ```julia
 using Pkg
 pkg"registry add https://github.com/okatsn/OkRegistry.git"
