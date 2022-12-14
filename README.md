@@ -1,4 +1,46 @@
 [TOC]
+# Local registry
+TODO: intro, docs, and etc.
+- write a brief introduction for local registry.
+  - how it works, when and why it is required
+
+## Introduction
+
+A registry is for registration of packages, it specify the following information:
+- compatibility (`Compat.toml`)
+- dependency    (`Deps.toml`)
+- package       (`Package.toml`)
+- versions      (`Versions.toml`)
+
+Takes `YourPackage` as an exemplary package registered in the local registry `OkRegistry`.
+
+`Compat.toml` specify version by version the compatibility between `YourPackage` and julia. For example, when you `pkg> add YourPackage` in a machine, only the version of `YourPackage` compatible with julia of that machine can be added.
+
+`Deps.toml` specify what other packages `YourPackage` depends; noted that the version ranges stated inside `Deps.toml` are those of `YourPackage`. The version ranges of dependent packages of `YourPackage` is stated in the `[compat]` section in the `Project.toml` of `YourPackage`.
+
+In final, `Package.toml` specify the uuid and the repository url (field `repo`) of `YourPackage`, and `Versions.toml` specify the `git-tree-sha` (commit hash) for each version of `YourPackage`.
+
+With `reop` and `git-tree-sha`, we can have a specific and unique copy in the history of `YourPackage` cloned in our machine.
+
+### Do I need my package to be registered?
+A registered package (saying `YourPackage`) has its URL to repository stated in `Package.toml`, as well as version--commit-hash pair is stated in `Versions.toml`.
+
+Without these information, `YourPackage` can only be added through `pkg> "https://github.com/okatsn/YourPackage.jl.git"` for example. 
+Besides, you can only access the history (a different "version") by `git clone [URL]` and then `git checkout [commit-hash]`.
+Furthermore, no compatibility check to prevent potential fail of a project relies on `YourPackage`.
+
+### When should I update my local registry?
+You should update the registry when `YourPackage` has a **meaningful change that should be immediately applied by other** package/project depends on it **through `pkg> add`**.
+"Meaningful change" is, for example, a new function, fixing a critical bug, redefine API, etc..
+
+To avoid frequently updating your registry, use `pkg> dev` for establishing the dependency between `YourPackage` and a certain project relies on it.
+
+### When should I update the version number of my package registered in a local registry?
+Conventionally, the time for updating version is likely to be a branch merged to main/master, or a pull request merge.
+
+#### How to update the version number?
+[Just manually edit `Project.toml`](https://stackoverflow.com/questions/67710714/proper-way-of-updating-a-version-number-for-self-developed-package-in-julia)
+
 ## Create registry and add local Package to the registry
 Go to the script `add_local_pkg_to_registry.jl`.
 
@@ -27,7 +69,14 @@ pkg> registry up OkRegistry
 - [Tips and tricks to register your first Julia package](https://www.juliabloggers.com/tips-and-tricks-to-register-your-first-julia-package/)
 - [Developing Julia Packages by Chris Rackauckas](https://www.youtube.com/watch?v=QVmU29rCjaA)
 
-## SSH KEYS
+
+# Register to the General registry
+use [Registrator.jl](https://github.com/JuliaRegistries/Registrator.jl)
+
+
+# TODO: Try, organize and remove the followings
+## Authentication
+### SSH KEYS
 SSH key always born into a pair, a public and private key.
 The
 
@@ -95,7 +144,7 @@ CHECKPOINT:
 - [SSH Keys for GitHub](https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html)
 - [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988)
 
-## TODOs
+## Tag
 ### Create a git tag: 
 - `git tag -a vX.X.X` (where this matches the version number you used in Project.toml)
 
@@ -132,15 +181,15 @@ jobs:
 ```
 
 
-#### Github Actions
+### Github Actions
 [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 
-##### secrets
+#### secrets
 [Set it here as an example](https://github.com/okatsn/DataFrameTools.jl/settings/secrets/actions)
 
 
 
-##### Syntax
+#### Syntax
 Trigger a workflow
 - `on: events_that_trigger_workflows`
   - [on](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on) 
@@ -150,11 +199,11 @@ Trigger a workflow
   
 
 
-##### Julia Actions
+#### Julia Actions
 An organisation to host and maintain GitHub Actions useful for Julia projects.
 see https://github.com/julia-actions
 
-### YAML script
+#### YAML script
 What is YAML?
 [Learn yaml in Y minutes](https://learnxinyminutes.com/docs/yaml/)
 
@@ -182,5 +231,4 @@ jobs:
           # For more information, see [here](https://github.com/JuliaRegistries/TagBot#custom-registries)
 ```
 
-## Register to the General registry
-use [Registrator.jl](https://github.com/JuliaRegistries/Registrator.jl)
+
