@@ -33,14 +33,25 @@ Furthermore, no compatibility check to prevent potential fail of a project relie
 You should update the registry when `YourPackage` has a **meaningful change that should be immediately applied by other** package/project depends on it **through `pkg> add`**.
 "Meaningful change" is, for example, a new function, fixing a critical bug, redefine API, etc..
 
-To avoid frequently updating your registry, use `pkg> dev` for establishing the dependency between `YourPackage` and a certain project relies on it.
-
 ### When should I update the version number of my package registered in a local registry?
+It is quite free to choose the timing, especially `YourPackage` is majorly for personal or small organizational use.
 Conventionally, the time for updating version is likely to be a branch merged to main/master, or a pull request merge.
+
+In general, update the version number of `YourPackage` as you want a copy in the history that can be easily accessed under the management of a local/general registry.
 
 #### How to update the version number?
 [Just manually edit `Project.toml`](https://stackoverflow.com/questions/67710714/proper-way-of-updating-a-version-number-for-self-developed-package-in-julia)
 
+#### Summary on updating version number and registry
+Noted that `ERROR: Version x.x.x has already been registered and the content has changed.` will occurred if the content of `YourPackage` is changed BUT version number in its `Project.toml` doesn't.
+
+**To avoid frequently updating your registry as well as version number, use `pkg> dev`** for establishing the dependency between `YourPackage` and a certain package or project (`YourProject` for example) relies on it.
+
+Feel free to use `pkg> dev`. Everything will still work fine if `[compat]` in every package is properly set.
+For example, there is an other package, namely `WhatYourPackageDep` that `YourPackage` depends on via `pkg> dev`, and `YourProject` depends on `YourPackage`. 
+In this case, `YourProject` can still use the latest functionality of `WhatYourPackageDep` via `YourProject`, as in `YourProject` environment, the functionality of `WhatYourPackageDep` is obtained through url+commithash specified in your registry.
+
+where commithash paired to a unique version number
 ## Create registry and add local Package to the registry
 Go to the script `add_local_pkg_to_registry.jl`.
 
