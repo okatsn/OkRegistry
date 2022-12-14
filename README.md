@@ -27,7 +27,7 @@ A registered package (saying `YourPackage`) has its URL to repository stated in 
 
 Without these information, `YourPackage` can only be added through `pkg> "https://github.com/okatsn/YourPackage.jl.git"` for example. 
 Besides, you can only access the history (a different "version") by `git clone [URL]` and then `git checkout [commit-hash]`.
-Furthermore, no compatibility check to prevent potential fail of a project relies on `YourPackage`.
+Furthermore, no compatibility check to prevent potential fail of a project relies on `YourPackage` and thus difficult to reproduce a certain state.
 
 ### When should I update my local registry?
 You should update the registry when `YourPackage` has a **meaningful change that should be immediately applied by other** package/project depends on it **through `pkg> add`**.
@@ -42,16 +42,16 @@ In general, update the version number of `YourPackage` as you want a copy in the
 #### How to update the version number?
 [Just manually edit `Project.toml`](https://stackoverflow.com/questions/67710714/proper-way-of-updating-a-version-number-for-self-developed-package-in-julia)
 
-#### Summary on updating version number and registry
+### Summary on updating version number and registry
 Noted that `ERROR: Version x.x.x has already been registered and the content has changed.` will occurred if the content of `YourPackage` is changed BUT version number in its `Project.toml` doesn't.
 
 **To avoid frequently updating your registry as well as version number, use `pkg> dev`** for establishing the dependency between `YourPackage` and a certain package or project (`YourProject` for example) relies on it.
 
-Feel free to use `pkg> dev`. Everything will still work fine if `[compat]` in every package is properly set.
+Feel free to use `pkg> dev`. Everything is supposed to work fine if `[compat]` in every package is properly set.
 For example, there is an other package, namely `WhatYourPackageDep` that `YourPackage` depends on via `pkg> dev`, and `YourProject` depends on `YourPackage`. 
-In this case, `YourProject` can still use the latest functionality of `WhatYourPackageDep` via `YourProject`, as in `YourProject` environment, the functionality of `WhatYourPackageDep` is obtained through url+commithash specified in your registry.
+In this case, `YourProject` can still use the latest functionality of `WhatYourPackageDep` via `YourProject`, as in `YourProject` environment, `using YourPackage` compile the code of `WhatYourPackageDep` at a local path instead (where you can see in the `Manifest.toml` of `YourPackage`, the `git-tree-sha` in `[[WhatYourPackageDep]]` is replaced by `path`, as [`dev` sticks a package to the "current state" while `add` sticks to "reproducible state"](https://pkgdocs.julialang.org/v1/managing-packages/#developing)).
 
-where commithash paired to a unique version number
+
 ## Create registry and add local Package to the registry
 Go to the script `add_local_pkg_to_registry.jl`.
 
