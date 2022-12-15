@@ -64,6 +64,7 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 # ## Register/update a single local package
 # register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
 # ## Register/update all local packages
+iserrored = false
 for pkgpath in localpkgpaths
     try
     register(
@@ -72,8 +73,13 @@ for pkgpath in localpkgpaths
         push=true # optional
     )
     catch e
+        iserrored = true
         pkgname, pkgdir = map(f-> f(pkgpath), (basename, dirname))
         @warn "($(pkgname)) Error occurred in its registration to OkRegistry."
         @warn "Skipped (Error message: $e)"
     end
+end
+
+if iserrored
+    error("At least one error occurred in the session.")
 end
