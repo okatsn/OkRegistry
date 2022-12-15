@@ -72,7 +72,8 @@ for pkgpath in localpkgpaths
         push=true # optional
     )
     catch e
-        @warn "Error occurred when registering $pkgpath"
-        rethrow(e)
+        pkgname, pkgdir = map(f-> f(pkgpath), (basename, dirname))
+        @warn "($(pkgname)) Error occurred in its registration to OkRegistry."
+        @warn "Skipped (Error message: $e)"
     end
 end
