@@ -43,3 +43,6 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 ["0.1.8-0"]
 FileTools = "2c042965-b292-4a40-a4a9-3abf2d00bee5"
+
+["0.1.9-0"]
+OutlierDetection = "262411bb-c475-4342-ba9e-03b8c0183ca6"
