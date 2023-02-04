@@ -7,3 +7,7 @@ DataFrames = "1"
 GeometryBasics = "0.4"
 PlotUtils = "1"
 ShiftedArrays = "2"
+
+["0.2.6-0"]
+DataFrameTools = ["0.5.3-0.5", "1.0.8-1"]
+OkPkgTemplates = "0.3"
