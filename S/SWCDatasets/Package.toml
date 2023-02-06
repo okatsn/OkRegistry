@@ -1,0 +1,3 @@
+name = "SWCDatasets"
+uuid = "92a3a819-b5fa-4251-b583-c8bfed228d45"
+repo = "https://github.com/okatsn/SWCDatasets.jl"
