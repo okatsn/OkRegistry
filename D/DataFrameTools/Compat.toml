@@ -2,8 +2,10 @@
 DataFrames = "1"
 julia = "1.6.4-1"
 
+["0.5.3"]
+OkPkgTemplates = "0.3"
+
 ["0.5.3-0"]
 CSV = "0.10.9-0.10"
 DocumenterTools = "0.1.16-0.1"
 MAT = "0.10.3-0.10"
-OkPkgTemplates = "0.3"
