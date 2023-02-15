@@ -6,5 +6,5 @@ MLJDecisionTreeInterface = "c6f25543-311c-4c74-83dc-3ea6d1015661"
 ["0.2-0.2.8"]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
-["0.2.8-0"]
+["0.2.8-0.2.9"]
 OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
