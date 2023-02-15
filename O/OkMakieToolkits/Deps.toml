@@ -12,5 +12,5 @@ PlotUtils = "995b91a9-d308-5afd-9ec6-746e21dbc043"
 ["0.2.1-0"]
 GeometryBasics = "5c1252a2-5f33-56bf-86c9-59e7332b4326"
 
-["0.2.6-0"]
+["0.2.6"]
 OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
