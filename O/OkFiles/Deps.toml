@@ -4,5 +4,5 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 ["0.3-0"]
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
-["0.4-0"]
+["0.4.0"]
 OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
