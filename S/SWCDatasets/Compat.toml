@@ -8,3 +8,7 @@ DataFrames = "1.4.4-1"
 ["0.1.2-0"]
 CodecZlib = "0.7.1-0.7"
 GZip = "0.5.1-0.5"
+
+["0.2-0"]
+OkFiles = "0.4"
+PrettyTables = "2.2.2-2"
