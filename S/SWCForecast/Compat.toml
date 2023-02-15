@@ -51,9 +51,11 @@ FHist = "0.8.11-0.9"
 FileTools = "0.7.1-0.7"
 MLJDecisionTreeInterface = "0.3"
 MLJEnsembles = "0.3.2-0.3"
-OkPkgTemplates = "0.3"
 OutlierDetection = "0.3.3-0.3"
 Plots = "1.38.4-1"
+
+["0.1.10-0.1.11"]
+OkPkgTemplates = "0.3"
 
 ["0.1.11-0"]
 DataFrameTools = ["0.5", "1.0.8-1"]
