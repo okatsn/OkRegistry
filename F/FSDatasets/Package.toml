@@ -1,0 +1,3 @@
+name = "FSDatasets"
+uuid = "711c5545-762e-4f29-8c0d-76adcc314cdc"
+repo = "https://github.com/okatsn/FSDatasets.jl"
