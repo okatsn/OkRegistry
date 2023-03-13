@@ -14,3 +14,6 @@ GeometryBasics = "5c1252a2-5f33-56bf-86c9-59e7332b4326"
 
 ["0.2.6"]
 OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
+
+["0.5-0"]
+Chain = "8be319e6-bccf-4806-a6f7-6fae938471bc"
