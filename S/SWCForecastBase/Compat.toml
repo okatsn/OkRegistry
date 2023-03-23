@@ -9,4 +9,12 @@ ShiftedArrays = "2"
 
 ["0.3-0"]
 MLJ = "0.19.1-0.19"
+
+["0.3-0.3.1"]
 MLJDecisionTreeInterface = "0.3.1-0.3"
+
+["0.3.2-0"]
+CairoMakie = "0.10.2-0.10"
+MLJDecisionTreeInterface = "0.4"
+SWCDatasets = "0.2.5-0.2"
+StructArrays = "0.6.14-0.6"

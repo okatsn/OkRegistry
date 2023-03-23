@@ -11,3 +11,8 @@ ShiftedArrays = "1277b4bf-5013-50f5-be3d-901d8477a67a"
 ["0.3-0"]
 MLJ = "add582a8-e3ab-11e8-2d5e-e98b27df1bc7"
 MLJDecisionTreeInterface = "c6f25543-311c-4c74-83dc-3ea6d1015661"
+
+["0.3.2-0"]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+SWCDatasets = "92a3a819-b5fa-4251-b583-c8bfed228d45"
+StructArrays = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
