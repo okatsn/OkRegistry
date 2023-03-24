@@ -13,13 +13,15 @@ MLJBase = ["0.20", "0.21.5-0.21"]
 
 ["0.2.6-0"]
 DecisionTree = "0.12"
-MLJDecisionTreeInterface = "0.3"
 
 ["0.2.6-0.2.7"]
 MLJ = "0.19"
 
 ["0.2.6-0.2.8"]
 Documenter = "0.27"
+
+["0.2.6-0.3.0"]
+MLJDecisionTreeInterface = "0.3"
 
 ["0.2.8"]
 MLJ = ["0.18", "0.19.1-0.19"]
@@ -29,3 +31,6 @@ OkPkgTemplates = "0.3"
 
 ["0.2.9-0"]
 MLJ = "0.18-0.20"
+
+["0.3.1-0"]
+MLJDecisionTreeInterface = "0.3-0.4"
