@@ -16,3 +16,9 @@ MLJDecisionTreeInterface = "c6f25543-311c-4c74-83dc-3ea6d1015661"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 SWCDatasets = "92a3a819-b5fa-4251-b583-c8bfed228d45"
 StructArrays = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
+
+["0.4-0"]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+Chain = "8be319e6-bccf-4806-a6f7-6fae938471bc"
+OkTableTools = "42c3750f-3b15-406e-9cb1-f05d2df8c96f"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
