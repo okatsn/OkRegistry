@@ -7,6 +7,8 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 ["0.1-0"]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+
+["0.1-0.1.2"]
 SWCDatasets = "92a3a819-b5fa-4251-b583-c8bfed228d45"
 
 ["0.1.1-0"]
