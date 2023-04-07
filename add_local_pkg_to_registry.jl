@@ -24,7 +24,7 @@
 # - Add a newly created package in exactly the same way
 #
 # ## Register/update a single local package
-# register(dirmain("OkMLModels"), registry=dir_myregistry, push=true)
+# register(joinpath(dirname(pwd()), "OkRegistrator"), registry=pwd(), push=true)
 # ## Register/update all local packages
 
 
