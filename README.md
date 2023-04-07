@@ -1,4 +1,9 @@
 [TOC]
+# OkRegistry
+[How to read Compat.toml](https://github.com/JuliaLang/Pkg.jl/issues/1190)
+
+See `add_local_pkg_to_registry.jl`
+
 # Local registry
 TODO: intro, docs, and etc.
 - write a brief introduction for local registry.
