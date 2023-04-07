@@ -9,7 +9,7 @@
 #
 # Requirement:
 # You'll need `registry add https://github.com/okatsn/OkRegistry.git` to use this script.
-using LocalRegistry
+using LocalRegistry, TOML
 """
 `folderlist(dir; join=true)` return the list of folder but no subfolder under `dir`. This function uses `walkdir`.
 """
@@ -45,11 +45,23 @@ function folderlist(expr::Regex, dir; join=true)
     return allfolders[desired_ind]
 end
 
+function checkversion(pkgpath)
+    d = TOML.parsefile(joinpath(pkgpath, "Project.toml"))
+    current_ver = d["version"]
+    legalver = match(r"(\d+\.?)+", current_ver).match
+    if isequal(legalver, current_ver)
+        vervalid = true
+    else
+        vervalid = false
+        @warn "Current version $current_ver is not legal."
+    end
+end
 
-dirmain(args...) = joinpath(dirname(pwd()), args...) # i.e. raw"D:\GoogleDrive\1Programming\julia"
+
+dirmain(args...) = joinpath(dirname(pwd()), args...) # The parent of pwd (which should be .../OkRegistry/)
 dir_myregistry = dirmain("OkRegistry")
 
-localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
+localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain()) # all folders under dirmain that is not "OkRegistry".
 
 
 # # Update the registry of one package
@@ -67,17 +79,20 @@ localpkgpaths = folderlist(r"^((?!OkRegistry).)*$", dirmain())
 # ## Register/update all local packages
 iserrored = false
 for pkgpath in localpkgpaths
-    try
-    register(
-        pkgpath,
-        registry=dir_myregistry,
-        push=true # optional
-    )
-    catch e
-        iserrored = true
-        pkgname, pkgdir = map(f-> f(pkgpath), (basename, dirname))
-        @warn "($(pkgname)) Error occurred in its registration to OkRegistry."
-        @warn "Skipped (Error message: $e)"
+    # pkgpath = localpkgpaths[end-1]
+    if checkversion(pkgpath)
+        try
+        register(
+            pkgpath,
+            registry=dir_myregistry,
+            push=true # optional
+        )
+        catch e
+            iserrored = true
+            pkgname, pkgdir = map(f-> f(pkgpath), (basename, dirname))
+            @warn "($(pkgname)) Error occurred in its registration to OkRegistry."
+            @warn "Skipped (Error message: $e)"
+        end
     end
 end
 
