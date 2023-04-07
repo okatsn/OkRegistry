@@ -55,9 +55,9 @@ uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LocalRegistry]]
 deps = ["Pkg", "Random", "RegistryTools", "UUIDs"]
-git-tree-sha1 = "9f0328205b2bdeedb734aa0a93488807ea3e2b99"
+git-tree-sha1 = "5836d0df3f4122e65f0439fd543202b7ec66a7e6"
 uuid = "89398ba2-070a-4b16-a995-9893c55d93cf"
-version = "0.5.2"
+version = "0.5.3"
 
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
@@ -79,6 +79,12 @@ version = "2022.2.1"
 uuid = "ca575930-c2e3-43a9-ace4-1e988b2c1908"
 version = "1.2.0"
 
+[[OkRegistrator]]
+deps = ["LocalRegistry", "TOML"]
+path = "/home/jovyan/.julia/dev/OkRegistrator"
+uuid = "5eb89c91-2e2f-4632-ba7c-3ec58ab78207"
+version = "0.0.1"
+
 [[Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
@@ -98,9 +104,9 @@ uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[RegistryTools]]
 deps = ["AutoHashEquals", "LibGit2", "Pkg", "SHA", "UUIDs"]
-git-tree-sha1 = "aceb02a844394332608c88d7da6217daf2b5e4e5"
+git-tree-sha1 = "8bf5a39161bf2000a97861d8ae26eb7c4b5e3282"
 uuid = "d1eb7eb1-105f-429d-abf5-b0f65cb9e2c4"
-version = "1.8.1"
+version = "2.2.1"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
