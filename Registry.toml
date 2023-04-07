@@ -12,6 +12,7 @@ description = "A julia local registry"
 4502ade7-0b84-4acc-96da-75e5ce1d0abd = { name = "HypertextTools", path = "H/HypertextTools" }
 4acf06e8-6b0e-4a57-aafd-adf19fd274eb = { name = "OkMD", path = "O/OkMD" }
 4e74b330-6242-4c7a-bc50-5dcf56e2fdec = { name = "OkMakieToolkits", path = "O/OkMakieToolkits" }
+5eb89c91-2e2f-4632-ba7c-3ec58ab78207 = { name = "OkRegistrator", path = "O/OkRegistrator" }
 7016d903-ac20-4882-9d97-75c232100024 = { name = "SmallDatasetMaker", path = "S/SmallDatasetMaker" }
 711c5545-762e-4f29-8c0d-76adcc314cdc = { name = "FSDatasets", path = "F/FSDatasets" }
 8567d2c9-0786-49d4-a67b-7077e6cb99ca = { name = "OkMLModels", path = "O/OkMLModels" }
