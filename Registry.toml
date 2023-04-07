@@ -22,7 +22,6 @@ ab5b03c2-6ccc-4282-bdb8-07112b9001f0 = { name = "SWCForecast", path = "S/SWCFore
 ade42d9a-f0a7-4d7c-9f72-e1874134871e = { name = "TestTagBot", path = "T/TestTagBot" }
 b25a35d4-863d-483c-9fa1-95480bd075d2 = { name = "OkFiles", path = "O/OkFiles" }
 c318fce2-6087-4413-a694-e8b62f046540 = { name = "OkVectorScales", path = "O/OkVectorScales" }
-ce6b1742-4840-55fa-b093-852dadbb1d8b = { name = "RDatasets", path = "R/RDatasets" }
 d0c9a04e-d1fd-4d35-a387-089b7121b945 = { name = "Shorthands", path = "S/Shorthands" }
 d741b33f-378c-4fda-a3ef-81fb108a0236 = { name = "SWCExampleDatasets", path = "S/SWCExampleDatasets" }
 d9c8f7ca-66b2-433f-ab74-835b361b75b3 = { name = "TWAISWCF", path = "T/TWAISWCF" }
