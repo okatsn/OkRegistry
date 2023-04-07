@@ -9,6 +9,7 @@ description = "A julia local registry"
 2e886b56-b55e-403a-a2d0-ccbf75d993da = { name = "DataFrameTools", path = "D/DataFrameTools" }
 38290ba8-8fbe-457b-bf75-0e4980da3840 = { name = "OkPkgTemplates", path = "O/OkPkgTemplates" }
 42c3750f-3b15-406e-9cb1-f05d2df8c96f = { name = "OkTableTools", path = "O/OkTableTools" }
+44fb8f6e-77e3-42fb-a351-fd44f2ba0634 = { name = "OkDataFrameTools", path = "O/OkDataFrameTools" }
 4502ade7-0b84-4acc-96da-75e5ce1d0abd = { name = "HypertextTools", path = "H/HypertextTools" }
 4acf06e8-6b0e-4a57-aafd-adf19fd274eb = { name = "OkMD", path = "O/OkMD" }
 4e74b330-6242-4c7a-bc50-5dcf56e2fdec = { name = "OkMakieToolkits", path = "O/OkMakieToolkits" }
