@@ -12,21 +12,10 @@
 
 
 
-
-# # Update the registry of one package
-# register("/home/jovyan/swc-forecast-insider/temp/dev/Shorthands", registry = dir_myregistry, push=true) # for example
-
-
-
-
 # # Add all local package to the registry created before
 # - Update an already registered package like this
 # - Add a newly created package in exactly the same way
 #
-# ## Register/update a single local package
-# register(joinpath(dirname(pwd()), "OkRegistrator"), registry=pwd(), push=true)
 # ## Register/update all local packages
-
-
 using OkRegistrator
 okciregister()

@@ -1,6 +1,8 @@
 [deps]
+LocalRegistry = "89398ba2-070a-4b16-a995-9893c55d93cf"
 OkRegistrator = "5eb89c91-2e2f-4632-ba7c-3ec58ab78207"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 
 [compat]
 julia = "1.6.7"
+LocalRegistry = "0.5.3"
