@@ -4,6 +4,19 @@
 
 See `add_local_pkg_to_registry.jl`
 
+## Create registry and add local Package to the registry
+> With this repo as an example
+
+1. Go to the script `add_local_pkg_to_registry.jl`.
+
+2. Using OkRegistrator.jl
+```julia
+(OkRegistry) pkg> up
+julia> using OkRegistrator
+julia> tryregisterat("../SmallDatasetMaker", pwd())
+```
+
+
 # Local registry
 TODO: intro, docs, and etc.
 - write a brief introduction for local registry.
@@ -57,8 +70,6 @@ For example, there is an other package, namely `WhatYourPackageDep` that `YourPa
 In this case, `YourProject` can still use the latest functionality of `WhatYourPackageDep` via `YourProject`, as in `YourProject` environment, `using YourPackage` compile the code of `WhatYourPackageDep` at a local path instead (where you can see in the `Manifest.toml` of `YourPackage`, the `git-tree-sha` in `[[WhatYourPackageDep]]` is replaced by `path`, as [`dev` sticks a package to the "current state" while `add` sticks to "reproducible state"](https://pkgdocs.julialang.org/v1/managing-packages/#developing)).
 
 
-## Create registry and add local Package to the registry
-Go to the script `add_local_pkg_to_registry.jl`.
 
 
 ## Applying your registry -- In a certain environment
