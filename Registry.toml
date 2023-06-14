@@ -7,6 +7,7 @@ description = "A julia local registry"
 2060839e-1c32-41f2-b945-b79b1f5cc0e8 = { name = "OkExpressions", path = "O/OkExpressions" }
 2c042965-b292-4a40-a4a9-3abf2d00bee5 = { name = "FileTools", path = "F/FileTools" }
 2e886b56-b55e-403a-a2d0-ccbf75d993da = { name = "DataFrameTools", path = "D/DataFrameTools" }
+32148328-147a-4c3a-aded-c727b77b4e74 = { name = "CorpusCleanerForTWLaws", path = "C/CorpusCleanerForTWLaws" }
 38290ba8-8fbe-457b-bf75-0e4980da3840 = { name = "OkPkgTemplates", path = "O/OkPkgTemplates" }
 42c3750f-3b15-406e-9cb1-f05d2df8c96f = { name = "OkTableTools", path = "O/OkTableTools" }
 44fb8f6e-77e3-42fb-a351-fd44f2ba0634 = { name = "OkDataFrameTools", path = "O/OkDataFrameTools" }
