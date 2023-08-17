@@ -11,3 +11,6 @@ MLJBase = "a7f614a8-145f-11e9-1d2a-a57a1082229d"
 
 ["0.2.8-0.2.9"]
 OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
+
+["0.4-0"]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
