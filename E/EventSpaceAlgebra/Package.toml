@@ -1,0 +1,3 @@
+name = "EventSpaceAlgebra"
+uuid = "8edd2f2a-3081-48b8-b943-5251c412605e"
+repo = "https://github.com/okatsn/EventSpaceAlgebra.jl"
