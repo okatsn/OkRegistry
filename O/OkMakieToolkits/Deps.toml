@@ -1,10 +1,12 @@
 ["0.1.1-0"]
-CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
-DataFrameTools = "2e886b56-b55e-403a-a2d0-ccbf75d993da"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 ShiftedArrays = "1277b4bf-5013-50f5-be3d-901d8477a67a"
 Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
+["0.1.1-0.8.0"]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DataFrameTools = "2e886b56-b55e-403a-a2d0-ccbf75d993da"
 
 ["0.2-0"]
 PlotUtils = "995b91a9-d308-5afd-9ec6-746e21dbc043"
@@ -17,3 +19,6 @@ OkPkgTemplates = "38290ba8-8fbe-457b-bf75-0e4980da3840"
 
 ["0.5-0"]
 Chain = "8be319e6-bccf-4806-a6f7-6fae938471bc"
+
+["0.8.1-0"]
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
