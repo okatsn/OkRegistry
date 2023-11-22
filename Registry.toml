@@ -35,4 +35,3 @@ d9c8f7ca-66b2-433f-ab74-835b361b75b3 = { name = "TWAISWCF", path = "T/TWAISWCF" 
 e7521825-5d6b-4d2d-b9e2-9f70533e6f0b = { name = "WorkingScopes", path = "W/WorkingScopes" }
 e85a2721-9ec6-4204-992d-01b2e59f22bb = { name = "OkTexHelper", path = "O/OkTexHelper" }
 f25bfc00-93e4-48b9-89c1-3948a036d4be = { name = "SWCForecastBase", path = "S/SWCForecastBase" }
-fa27ac20-bec5-4afc-9c34-43d8d1b4033a = { name = "BasicProgrammingNCUES1121", path = "B/BasicProgrammingNCUES1121" }
