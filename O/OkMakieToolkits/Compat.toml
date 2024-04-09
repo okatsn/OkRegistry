@@ -1,6 +1,14 @@
 ["0-0.8.0"]
 julia = "1.6.0-1"
 
+["0.10-0"]
+Chain = "0.6"
+DataFrames = "1.6.1-1"
+GeometryBasics = "0.4.10-0.4"
+Makie = "0.20.9-0.20"
+PlotUtils = "1.4.1-1"
+julia = "1.10.0-1"
+
 ["0.2.1-0"]
 ShiftedArrays = "2"
 
@@ -16,10 +24,10 @@ OkPkgTemplates = "0.3"
 ["0.2.6-0.8.0"]
 DataFrameTools = ["0.5.3-0.5", "1.0.8-1"]
 
-["0.5-0"]
+["0.5-0.9"]
 Chain = "0.5"
 
-["0.8.1-0"]
+["0.8.1-0.9"]
 DataFrames = "1.4-1.6"
 GeometryBasics = "0.3-0.4"
 Makie = "0.19.8-0.19"
