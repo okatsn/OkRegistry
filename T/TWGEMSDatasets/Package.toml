@@ -1,0 +1,3 @@
+name = "TWGEMSDatasets"
+uuid = "e02d82d9-7e7e-46f3-9a6c-b9afd88f5ac7"
+repo = "https://github.com/okatsn/TWGEMSDatasets.jl"
