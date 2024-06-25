@@ -28,6 +28,7 @@ description = "A julia local registry"
 92a3a819-b5fa-4251-b583-c8bfed228d45 = { name = "SWCDatasets", path = "S/SWCDatasets" }
 9c7ade6c-5fb5-4442-8c75-5d5cb13b77a3 = { name = "OkDevContainerTemplates", path = "O/OkDevContainerTemplates" }
 ab5b03c2-6ccc-4282-bdb8-07112b9001f0 = { name = "SWCForecast", path = "S/SWCForecast" }
+add5ede0-49b9-4840-ac63-6ca6386cff5c = { name = "OkEMailSender", path = "O/OkEMailSender" }
 ade42d9a-f0a7-4d7c-9f72-e1874134871e = { name = "TestTagBot", path = "T/TestTagBot" }
 ae1ef8a7-b62b-4b98-a332-ad23a8f1746c = { name = "OkHypertextTools", path = "O/OkHypertextTools" }
 b25a35d4-863d-483c-9fa1-95480bd075d2 = { name = "OkFiles", path = "O/OkFiles" }

@@ -1,0 +1,3 @@
+name = "OkEMailSender"
+uuid = "add5ede0-49b9-4840-ac63-6ca6386cff5c"
+repo = "https://github.com/okatsn/OkEMailSender.jl"
