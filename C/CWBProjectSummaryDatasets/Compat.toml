@@ -6,3 +6,6 @@ SmallDatasetMaker = "0.1.4-0.1"
 
 ["0.6.1-0"]
 SmallDatasetMaker = "0.1.4-0.2"
+
+["0.7.1-0"]
+OkFiles = "0.5"
