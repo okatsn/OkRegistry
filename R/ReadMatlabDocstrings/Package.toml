@@ -1,0 +1,3 @@
+name = "ReadMatlabDocstrings"
+uuid = "5ac41729-0616-47d0-b24e-40b588cdc0a8"
+repo = "https://github.com/okatsn/ReadMatlabDocstrings.jl"
