@@ -9,6 +9,7 @@ description = "A julia local registry"
 24510c62-9d45-4479-942d-3b577217595b = { name = "SWCFluxDeps", path = "S/SWCFluxDeps" }
 2c042965-b292-4a40-a4a9-3abf2d00bee5 = { name = "FileTools", path = "F/FileTools" }
 2e886b56-b55e-403a-a2d0-ccbf75d993da = { name = "DataFrameTools", path = "D/DataFrameTools" }
+2efd5ccf-8713-4cce-9981-56ece9225c34 = { name = "GEMSMagTIP", path = "G/GEMSMagTIP" }
 305ee1c2-282c-4917-94ba-32dcc37024a6 = { name = "OkStartUp", path = "O/OkStartUp" }
 32148328-147a-4c3a-aded-c727b77b4e74 = { name = "CorpusCleanerForTWLaws", path = "C/CorpusCleanerForTWLaws" }
 34127a1e-43e2-4f4e-97ac-74f3581abec9 = { name = "ProjectLawMaster", path = "P/ProjectLawMaster" }
