@@ -3,3 +3,6 @@ Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 Serde = "db9b398d-9517-45f8-9a95-92af99003e0e"
 StructEquality = "6ec83bb0-ed9f-11e9-3b4c-2b04cb4e219c"
+
+["0.1.1-0"]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
