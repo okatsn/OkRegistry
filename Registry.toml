@@ -18,6 +18,7 @@ description = "A julia local registry"
 44fb8f6e-77e3-42fb-a351-fd44f2ba0634 = { name = "OkDataFrameTools", path = "O/OkDataFrameTools" }
 4502ade7-0b84-4acc-96da-75e5ce1d0abd = { name = "HypertextTools", path = "H/HypertextTools" }
 4acf06e8-6b0e-4a57-aafd-adf19fd274eb = { name = "OkMD", path = "O/OkMD" }
+4e730273-489a-4dfd-9ca2-bebabcd3c278 = { name = "OkInformationalAnalysis", path = "O/OkInformationalAnalysis" }
 4e74b330-6242-4c7a-bc50-5dcf56e2fdec = { name = "OkMakieToolkits", path = "O/OkMakieToolkits" }
 5ac41729-0616-47d0-b24e-40b588cdc0a8 = { name = "ReadMatlabDocstrings", path = "R/ReadMatlabDocstrings" }
 5eb89c91-2e2f-4632-ba7c-3ec58ab78207 = { name = "OkRegistrator", path = "O/OkRegistrator" }
