@@ -13,6 +13,7 @@ description = "A julia local registry"
 305ee1c2-282c-4917-94ba-32dcc37024a6 = { name = "OkStartUp", path = "O/OkStartUp" }
 32148328-147a-4c3a-aded-c727b77b4e74 = { name = "CorpusCleanerForTWLaws", path = "C/CorpusCleanerForTWLaws" }
 34127a1e-43e2-4f4e-97ac-74f3581abec9 = { name = "ProjectLawMaster", path = "P/ProjectLawMaster" }
+34c9f1bc-122f-4934-a8b7-538be05c4fb7 = { name = "MyUtilBox", path = "M/MyUtilBox" }
 38290ba8-8fbe-457b-bf75-0e4980da3840 = { name = "OkPkgTemplates", path = "O/OkPkgTemplates" }
 42c3750f-3b15-406e-9cb1-f05d2df8c96f = { name = "OkTableTools", path = "O/OkTableTools" }
 44fb8f6e-77e3-42fb-a351-fd44f2ba0634 = { name = "OkDataFrameTools", path = "O/OkDataFrameTools" }
