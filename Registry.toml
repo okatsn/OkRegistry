@@ -4,6 +4,7 @@ repo = "https://github.com/okatsn/OkRegistry.git"
 description = "A julia local registry"
 
 [packages]
+13790f54-d860-4895-b730-45df7ac0a90b = { name = "OkValueReplacer", path = "O/OkValueReplacer" }
 2059b88b-3fb9-401b-8059-181c8104de72 = { name = "SWCPlayground", path = "S/SWCPlayground" }
 2060839e-1c32-41f2-b945-b79b1f5cc0e8 = { name = "OkExpressions", path = "O/OkExpressions" }
 24510c62-9d45-4479-942d-3b577217595b = { name = "SWCFluxDeps", path = "S/SWCFluxDeps" }
