@@ -38,6 +38,7 @@ ade42d9a-f0a7-4d7c-9f72-e1874134871e = { name = "TestTagBot", path = "T/TestTagB
 ae1ef8a7-b62b-4b98-a332-ad23a8f1746c = { name = "OkHypertextTools", path = "O/OkHypertextTools" }
 b25a35d4-863d-483c-9fa1-95480bd075d2 = { name = "OkFiles", path = "O/OkFiles" }
 b38d3104-45cc-42ed-bfee-2aefedd5b40b = { name = "CWBProjectSummaryDatasets", path = "C/CWBProjectSummaryDatasets" }
+baabcd0e-1760-42d9-85cb-3fb569e66d9a = { name = "OkImageCropper", path = "O/OkImageCropper" }
 bf75f91d-8d33-4f2c-bf9d-6eaba12b5f3c = { name = "OkValueSegments", path = "O/OkValueSegments" }
 c318fce2-6087-4413-a694-e8b62f046540 = { name = "OkVectorScales", path = "O/OkVectorScales" }
 d0c9a04e-d1fd-4d35-a387-089b7121b945 = { name = "Shorthands", path = "S/Shorthands" }
