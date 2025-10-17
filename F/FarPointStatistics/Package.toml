@@ -1,0 +1,3 @@
+name = "FarPointStatistics"
+uuid = "d200e52a-f1cf-47db-803e-afe27b9c9524"
+repo = "https://github.com/okatsn/FarPointStatistics.jl"

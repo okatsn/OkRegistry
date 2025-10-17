@@ -42,6 +42,7 @@ baabcd0e-1760-42d9-85cb-3fb569e66d9a = { name = "OkImageCropper", path = "O/OkIm
 bf75f91d-8d33-4f2c-bf9d-6eaba12b5f3c = { name = "OkValueSegments", path = "O/OkValueSegments" }
 c318fce2-6087-4413-a694-e8b62f046540 = { name = "OkVectorScales", path = "O/OkVectorScales" }
 d0c9a04e-d1fd-4d35-a387-089b7121b945 = { name = "Shorthands", path = "S/Shorthands" }
+d200e52a-f1cf-47db-803e-afe27b9c9524 = { name = "FarPointStatistics", path = "F/FarPointStatistics" }
 d741b33f-378c-4fda-a3ef-81fb108a0236 = { name = "SWCExampleDatasets", path = "S/SWCExampleDatasets" }
 d9c8f7ca-66b2-433f-ab74-835b361b75b3 = { name = "TWAISWCF", path = "T/TWAISWCF" }
 e02d82d9-7e7e-46f3-9a6c-b9afd88f5ac7 = { name = "TWGEMSDatasets", path = "T/TWGEMSDatasets" }
