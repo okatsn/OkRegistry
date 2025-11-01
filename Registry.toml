@@ -50,4 +50,5 @@ e7521825-5d6b-4d2d-b9e2-9f70533e6f0b = { name = "WorkingScopes", path = "W/Worki
 e85a2721-9ec6-4204-992d-01b2e59f22bb = { name = "OkTexHelper", path = "O/OkTexHelper" }
 ebde9838-6584-4548-b79e-429a239baf90 = { name = "GeoEMTIPDemonstration", path = "G/GeoEMTIPDemonstration" }
 f25bfc00-93e4-48b9-89c1-3948a036d4be = { name = "SWCForecastBase", path = "S/SWCForecastBase" }
+f7d047fd-6333-4053-a0b9-a2f58f647aef = { name = "OkCustomInfos", path = "O/OkCustomInfos" }
 fa63e605-4ca0-440e-9899-f71f0f6b0a21 = { name = "OkNestedDicts", path = "O/OkNestedDicts" }
