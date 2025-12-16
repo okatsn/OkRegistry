@@ -32,6 +32,7 @@ description = "A julia local registry"
 8567d2c9-0786-49d4-a67b-7077e6cb99ca = { name = "OkMLModels", path = "O/OkMLModels" }
 8edd2f2a-3081-48b8-b943-5251c412605e = { name = "EventSpaceAlgebra", path = "E/EventSpaceAlgebra" }
 92a3a819-b5fa-4251-b583-c8bfed228d45 = { name = "SWCDatasets", path = "S/SWCDatasets" }
+9aefe428-500e-4e3b-8a70-3d1123ddf76f = { name = "OkAoGTutorials", path = "O/OkAoGTutorials" }
 9c7ade6c-5fb5-4442-8c75-5d5cb13b77a3 = { name = "OkDevContainerTemplates", path = "O/OkDevContainerTemplates" }
 ab5b03c2-6ccc-4282-bdb8-07112b9001f0 = { name = "SWCForecast", path = "S/SWCForecast" }
 add5ede0-49b9-4840-ac63-6ca6386cff5c = { name = "OkEMailSender", path = "O/OkEMailSender" }
