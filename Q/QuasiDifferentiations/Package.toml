@@ -1,0 +1,3 @@
+name = "QuasiDifferentiations"
+uuid = "f50c944d-ac1d-4a56-ae7a-e529d316ce70"
+repo = "https://github.com/okatsn/QuasiDifferentiations.jl"
